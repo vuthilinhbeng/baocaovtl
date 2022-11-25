@@ -1,0 +1,245 @@
+:root {
+    --color1: #f5498b;
+    --color2: rgb(70, 68, 68);
+    --color3: #fcedf2;
+    --color4: white;
+    --color5: yellow;
+    --color6: #e41313;
+    --color7: rgb(241, 236, 236);
+    --font-family1: segoe ui;
+    --font-size1: 13px;
+    --font-size2: 20px;
+    --font-weight1: bold;
+}
+
+
+
+/************ body_middle************/
+
+
+/*--------body_middle_ten---*/
+
+
+.anh {
+    margin: auto;
+    width: 1265px;
+    min-height: 300px;
+}
+
+.anh img {
+    width: 1265px;
+    min-height: 300px;
+}
+
+/*---- body_middle_five--- */
+
+.sonmoi {
+    width: 1265px;
+    min-height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.body_middle_five_top {
+    width: 1265px;
+    min-height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body_middle_five_top_left a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: var(--font-size2);
+}
+
+.test {
+    width: 1040px;
+    border-top: 3px dotted var(--color1);
+    position: relative;
+    top: 17px;
+}
+
+.body_middle_five_top_right {
+    width: 90px;
+    background-color: var(--color1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.body_middle_five_top_right a {
+    text-decoration: none;
+    color: var(--color4);
+    font-size: var(--font-size1);
+}
+
+.body_middle_five_bottom {
+    width: 1265px;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+#two {
+    width: 1265px;
+    height: 400px;
+}
+
+#four {
+    width: 1265px;
+    height: 400px;
+}
+
+.two {
+    width: 240px;
+    min-height: 330px;
+    position: relative;
+    background-color: var(--color4);
+    margin-top: 30px;
+    margin-left: 10px;
+    border: 1px solid var(--color7);
+    box-shadow: 2px 2px var(--color7);
+}
+
+.two .new {
+    color: var(--color1);
+}
+
+.two .son_2_main {
+    width: 200px;
+    min-height: 200px;
+    margin-left: 15px;
+}
+
+.two .son_2_1_main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.1s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+    width: 200px;
+    min-height: 189px;
+    margin-left: 15px;
+    margin-top: 11px;
+}
+
+.two:hover .son_2_1_main {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.report {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.fa-star {
+    margin-right: 0px;
+}
+
+.fa-star:before {
+    content: '\f006';
+    color: var(--color5);
+}
+
+#heart_btn_btn {
+    background-color: var(--color4);
+    border: none;
+    color: var(--color1);
+}
+
+.fa-heart:before {
+    content: '\f08a';
+}
+
+.two a {
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    color: var(--color2);
+    font-size: var(--font-size1);
+    line-height: 50px;
+    text-align: center;
+}
+
+.two a:hover {
+    color: var(--color1);
+}
+
+.two span {
+    display: block;
+    font-size: var(--font-size1);
+    text-align: center;
+}
+
+.bay {
+    width: 100px;
+    height: 25px;
+    background-color: var(--color1);
+    font-size: var(--font-size1);
+    line-height: 25px;
+    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    top: 4px;
+    left: -1px;
+}
+
+.bay span {
+    color: var(--color4);
+    margin-right: 20px;
+}
+
+.bay_two {
+    width: 100px;
+    height: 25px;
+    background-color: var(--color1);
+    font-size: var(--font-size1);
+    line-height: 25px;
+    border-radius: 0px 15px 15px 0px;
+    position: absolute;
+    top: 4px;
+    left: -1px;
+}
+
+.bay_two span {
+    color: var(--color3);
+    margin-right: 20px;
+}
+
+.bay_three {
+    width: 40px;
+    height: 35px;
+    font-size: var(--font-size1);
+    line-height: 25px;
+    position: absolute;
+    top: 270px;
+    left: 190px;
+}
+
+.bay_three .persen {
+    background-color: var(--color6);
+    color: var(--color4);
+    border-radius: 4px;
+}
+
+.test_span {
+    display: flex;
+    margin-left: 10px;
+}
+
+.test_span_one {
+    text-decoration: line-through;
+    color: var(--color2);
+}
+
+.test_span_two {
+    margin-left: 40px;
+    color: var(--color1);
+}
+
+/*---------------- footer--------- */

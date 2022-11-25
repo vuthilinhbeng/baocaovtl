@@ -1,0 +1,222 @@
+:root {
+    --color1: #f5498b;
+    --color2: rgb(70, 68, 68);
+    --color3: #fcedf2;
+    --color4: white;
+    --color5: yellow;
+    --color6: #e41313;
+    --color7: rgb(241, 236, 236);
+    --font-family1: segoe ui;
+    --font-size1: 13px;
+    --font-size2: 20px;
+    --font-weight1: bold;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family1);
+  }
+  .body_thanhtoan {
+    display: flex;
+    width: 100%;
+    /* min-height: 500px; */
+    margin: 0 auto;
+    /* background-color: red; */
+    height: 100%;
+  }
+  .body_trai {
+    background-color: white;
+    width: 55%;
+    height: 100%;
+    left: 0;
+ 
+  }
+  .body_phai {
+    background-color: #fafafa;
+    width: 45%;
+    height: 100%;
+    right: 0;
+  }
+  .body_trai-content {
+    transform: translatey(15%);
+    background-color: white;
+    width: 800px;
+    min-height: 500px;
+    margin-left: 20%;
+  }
+  .body_phai-content {
+    transform: translatey(25%);
+    width: 60%;
+    height: 500px;
+    margin-left: 50px;
+  }
+  .one img {
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+  }
+  .iconBG {
+    background: url("https://file.hstatic.net/200000385489/file/logo-black-rouge-4.1_0192bdc29226411fad49ecc1e0e0bc83.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 50px;
+  }
+  .link_way {
+    font-size: 15px;
+  }
+  .main-img {
+    width: 30px;
+    height: 30px;
+  }
+  .border-includes {
+    display: flex;
+    align-items: center;
+    border: #333 solid 1px;
+    padding: 20px 5px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  
+  .form-1_defalut {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #d9d9d9;
+  }
+  .form-1 div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .fullname > input,
+  .address > input {
+    width: 70%;
+    padding-left: 5px;
+  }
+  .form-1_defalut [type="email"] {
+    width: 50%;
+  }
+  .form-1_defalut::placeholder {
+    font-size: 15px;
+  }
+  .address-detail {
+    display: flex;
+    /* justify-content: center; */
+  }
+  .tinh-thanh {
+    position: relative;
+    margin-right: 15px;
+  }
+  .tinh-thanh > select {
+    width: 178px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
+  }
+  .address-detail_trans {
+    font-size: 12px;
+    position: absolute;
+    left: 9px;
+    bottom: 28px;
+  }
+  .line {
+    position: absolute;
+    border-right: 1px solid #333;
+    height: 30px;
+    top: -5px;
+    right: 20px;
+  }
+  .submit-pay {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .submit-pay_card > a {
+    color: #f5498b;
+    text-decoration: none;
+  }
+  .submit-pay_total > a {
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #f5498b;
+    color: white;
+  }
+  .submit-pay_total > a:hover {
+    opacity: 0.9;
+  }
+  .list-products {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+  }
+  .product-img img {
+    width: 60px;
+    height: auto;
+    display: block;
+  }
+  .product-info {
+    padding: 0 10px;
+  }
+  .product-info_name span {
+    font-weight: 500;
+  }
+  .sale-code {
+    padding: 20px 0px;
+    display: flex;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    justify-content: space-between;
+  }
+  .sale-code_input {
+    width: 65%;
+  }
+  .sale-code_submit {
+    width: 30%;
+    align-self: center;
+  }
+  .sale-code_submit button {
+    width: 100%;
+    height: 35px;
+  }
+  .sale-code_input input {
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+  }
+  .client {
+    display: inline-flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .client button {
+    width: 30%;
+    height: 35px;
+    background-color: #f5498b;
+    border: none;
+    color: white;
+    border-radius: 4px;
+  }
+  .delivery-price_price,
+  .delivery-price_deli {
+    display: flex;
+    justify-content: space-between;
+  }
+  .delivery-price {
+    padding: 20px 0px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  .total-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .isPrice{
+    font-size: 25px;
+  }
+  .total-price_inner{
+    align-items: center;
+  }

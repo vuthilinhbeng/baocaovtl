@@ -1,0 +1,370 @@
+:root {
+    --color1: #f5498b;
+    --color2: rgb(70, 68, 68);
+    --color3: #fcedf2;
+    --color4: white;
+    --color5: yellow;
+    --color6: #e41313;
+    --color7: rgb(241, 236, 236);
+    --font-family1: segoe ui;
+    --font-size1: 13px;
+    --font-size2: 20px;
+    --font-weight1: bold;
+    --background-color1: #4064ac;
+    --background-color2: #CF4332;
+    --background-image1: url(imge/anh_dn_fb.webp);
+    --background-image2: url(./imge/anh_dn_gg.webp);
+}
+
+
+
+/************ body************/
+
+
+hr {
+    border-top: 1px solid var(--color7);
+}
+
+
+.dangky {
+    width: 600px;
+    height: 900px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.dangky_top img {
+    width: 200px;
+    margin: auto;
+}
+
+.dangky_top h4 {
+    font-family: var(--color1);
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: var(--font-size2);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 90px;
+    font-weight: var(--font-weight1);
+    font-size: var(--font-size1);
+
+}
+
+.form-control {
+    border-radius: 3px;
+    height: 40px;
+    width: 400px;
+    line-height: 40px;
+    border: 1px solid var(--color7);
+    outline: none;
+    padding-left: 20px;
+    transition: all 0.4s;
+}
+
+input[type='email']:focus {
+    border: 1px solid var(--color1);
+}
+
+input[type='password']:focus {
+    border: 1px solid var(--color1);
+}
+
+/* input[type='radio']:focus {
+    border: 1px solid var(--color4);
+
+} */
+
+input[type='radio'] {
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    visibility: hidden;
+}
+
+input[type='radio']:before {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 3px;
+    left: -3px;
+    border: 1px solid var(--color1);
+    visibility: visible;
+}
+
+input[type='radio']:checked:after {
+    content: '';
+    position: absolute;
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 5px;
+    left: -2px;
+    background-color: var(--color1);
+    visibility: visible;
+}
+
+
+
+input[type='text']:focus {
+    border: 1px solid var(--color1);
+}
+
+.form_group {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.forget {
+    display: block;
+    margin-left: 311px;
+    color: var(--color2);
+    height: 30px;
+    margin-bottom: 10px;
+
+}
+
+.forget a {
+    font-size: var(--font-size1);
+    color: var(--color2);
+}
+
+.forget a:hover {
+    color: var(--color1);
+}
+
+.btn_dangnhap {
+    background: var(--color1);
+    border-radius: 3px;
+    width: 420px;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: var(--color4);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form_ngoai {
+    display: flex;
+    height: 42px;
+    width: 420px;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+
+.btn_fb {
+    width: 200px;
+    background-color: var(--background-color1);
+    background-image: var(--background-image1);
+    border: none;
+    color: var(--color4);
+    font-size: var(--font-size1);
+    margin-left: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    cursor: pointer;
+}
+
+.btn_fb a {
+    text-decoration: none;
+    color: var(--color4);
+}
+
+.btn_gg {
+    width: 200px;
+    background-color: var(--background-color2);
+    background-image: var(--background-image2);
+    border: none;
+    color: var(--color4);
+    font-size: var(--font-size1);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px center;
+    cursor: pointer;
+}
+
+.btn_gg a {
+    text-decoration: none;
+    color: var(--color4);
+}
+
+.gach {
+    display: flex;
+    width: 420px;
+    margin: auto;
+}
+
+.gach_1 {
+    height: 1px;
+    width: 100%;
+    background-color: var(--color7);
+    flex: 1;
+    margin-top: 12px;
+}
+
+.gach span {
+    color: var(--color2);
+    flex: 0.3;
+}
+
+
+.lk_dangkyky {
+    display: block;
+    height: 42px;
+    width: 420px;
+    margin: auto;
+    border-radius: 3px;
+    line-height: 42px;
+    border: 1px solid var(--color1);
+    outline: none;
+    padding-left: 0px;
+    transform: 0.4s;
+    background-color: var(--color4);
+    cursor: pointer;
+}
+
+.lk_dangky {
+    height: 42px;
+    width: 420px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.lk_dangky a {
+    text-decoration: none;
+    color: var(--color1);
+    text-transform: uppercase;
+    transform: 0.5s;
+}
+
+.lk_dangky:hover a {
+    color: var(--color4);
+    background-color: var(--color1);
+}
+
+.duet-date__input {
+    display: block;
+    margin: auto;
+    background-color: var(--color4);
+    border-radius: 3px;
+    height: 40px;
+    width: 400px;
+    line-height: 40px;
+    border: 1px solid var(--color7);
+    outline: none;
+    padding-left: 20px;
+    transition: all 0.4s;
+}
+
+.form_group_gt {
+    margin: auto;
+    height: 40px;
+    width: 420px;
+    margin-bottom: 30px;
+}
+
+.login_gt_gt {
+    display: flex;
+    margin: auto;
+    height: 40px;
+    width: 420px;
+}
+
+.login_gt_gt label {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#gt {
+    margin-left: 0px;
+}
+
+.login_gt_gt_one {
+    display: flex;
+    margin: auto;
+    height: 40px;
+    width: 420px;
+}
+
+
+
+.ten_top {
+    font-size: var(--font-size2);
+    font-family: var(--font-family1);
+    color: var(--color4);
+    position: absolute;
+    top: 140px;
+    text-align: center;
+    left: 200px;
+}
+
+.ten_bottom {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: var(--color1);
+    text-align: center;
+    border-radius: 35px;
+    position: absolute;
+    top: 210px;
+    text-align: center;
+    left: 600px;
+    border: 1px solid var(--color4);
+}
+
+.ten_bottom a {
+    text-decoration: none;
+    color: var(--color4);
+
+}
+
+
+
+.footer4_bottom input {
+    width: calc(90% - 100px) !important;
+    height: 40px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid var(--color1);
+    padding-left: 15px;
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: rgb(244, 242, 239);
+    outline: none;
+}
+
+.form_email {
+    display: flex;
+}
+
+.form_email button {
+    width: 100px;
+    height: 44.5px;
+    padding: 0 10px;
+    border-radius: 0 25px 25px 0;
+    color: #fff;
+    background: var(--color1);
+    border: none;
+    margin-top: 4.5px;
+}

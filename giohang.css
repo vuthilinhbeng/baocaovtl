@@ -1,0 +1,161 @@
+.body_content {
+    width: 1265px;
+    min-height: 100px;
+    margin: auto;
+}
+
+.body_middle hr {
+    width: 1265px;
+    margin: auto;
+    background-color: rgb(234, 234, 234);
+    height: 0.01px;
+    margin-bottom: 0px;
+}
+
+.body_content_head {
+    width: 100%;
+    height: 60px;
+}
+
+.body_content_head h1 {
+    font-size: 15px;
+    color: var(--color2);
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+.body_content_head a {
+    color: var(--color2);
+    text-decoration: none;
+
+}
+
+.body_content_head a:hover {
+    color: var(--color1);
+}
+
+.body_content_body {
+    width: 100%;
+    min-height: 50px;
+}
+
+.body_content_body1 {
+    height: 100%;
+    width: 350px;
+    margin: auto;
+}
+
+.body_content_body1 h1,
+h2 {
+    text-align: center;
+}
+
+.body_content_body1 h1 {
+    font-size: var(--font-size3);
+
+}
+
+.body_content_body1 h2 {
+    font-weight: normal;
+    font-size: var(--font-size4);
+    margin-top: 0px;
+}
+
+.body_content_body1_inside {
+    height: 10px;
+    width: 100px;
+    margin: auto;
+    border-bottom: 5px solid rgb(4, 4, 80);
+}
+
+.body_content_mainbody {
+    height: 350px;
+    width: 100%;
+    display: flex;
+}
+
+.body_content_mainbody_left {
+    height: 350px;
+    width: 70%;
+}
+
+.body_content_mainbody_left h1 {
+    font-weight: normal;
+    font-size: var(--font-size2);
+}
+
+.body_content_mainbody_right {
+    height: 350px;
+    width: 30%;
+    border: 1px solid var(--color7);
+}
+
+.body_content_mainbody_right_top {
+    height: 15%;
+    width: 92%;
+    margin: auto;
+    border-bottom: 1px dotted var(--color7);
+}
+
+.body_content_mainbody_right_center {
+    height: 20%;
+    width: 92%;
+    margin: auto;
+    display: flex;
+    border-bottom: 1px dotted var(--color7);
+}
+
+.body_content_mainbody_right_top h1 {
+    font-size: var(--font-size5);
+    padding-top: 8px;
+    height: 60px;
+    /* padding-top: 25px; */
+    font-family: var(--font-family1);
+}
+
+.body_content_mainbody_right_center h1 {
+    font-size: var(--font-size2);
+    font-weight: normal;
+    color: var(--color2);
+}
+
+.body_content_mainbody_right_center h2 {
+    font-size: var(--font-size5);
+    margin-top: 10px;
+    margin-left: 220px;
+    color: var(--color1);
+}
+
+.body_content_mainbody_right_bottom p {
+    font-size: var(--font-size4);
+    margin-top: 5px;
+    margin-left: 20px;
+    color: var(--color2);
+    line-height: 1.5;
+}
+
+.thanhtoan button {
+    width: 327px;
+    height: 44.5px;
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+    background: var(--color1);
+    border: none;
+    margin-top: 4.5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.thanhtoan button:hover {
+    background-color: var(--color4);
+    color: var(--color1);
+    border: 1px solid var(--color1);
+}
+
+.body_content_mainbody_right a {
+    color: var(--color1);
+    text-align: center;
+    margin-left: 120px;
+    text-decoration: none;
+    font-size: var(--font-size4);
+}
