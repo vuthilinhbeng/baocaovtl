@@ -44,7 +44,7 @@ if (mysqli_connect_errno()) {
 <div class = "container-fluid">
     <div class="card">
         <div class="card-header">
-            <h2>Thêm Sản Phẩm</h2>
+            <h2>Sửa Sản Phẩm</h2>
         </div>
         <div class="card-body">
            <form method="POST" enctype="multipart/form-data" >

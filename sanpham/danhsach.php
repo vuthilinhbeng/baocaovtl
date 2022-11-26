@@ -7,6 +7,25 @@ if (mysqli_connect_errno()) {
     $sql = "SELECT * FROM sanpham INNER JOIN danhmuc on sanpham.id_brand = danhmuc.id_brand";
     $query = mysqli_query($con, $sql);
 ?>
+<div>
+
+<div id="content-wrapper">
+    <div class="container">
+        <div class="left-menu">
+            <div class="menu-heading">
+                Admin Menu
+            </div>
+            <div class="menu-items">
+                <ul>
+                    <li>Danh Mục</li>
+                    <li>Sản Phẩm</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="contain-fluid">
     <div class="card">
         <div class="card-heard">
@@ -60,7 +79,7 @@ if (mysqli_connect_errno()) {
         </div>
     </div>
 </div>
-
+</div>
 <script>
     function Del(name){
         return confirm("Bạn có chắc chắn muốn xóa sản phẩm: " + name + "?");
