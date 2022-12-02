@@ -33,6 +33,7 @@ if (mysqli_connect_errno()) {
                 <ul>
                     <li> <a href="admin.php?page_layout=danhmuc">Danh Mục</a></li>
                     <li><a href="">Sản Phẩm</a></li>
+                    <li><a href="admin.php?page_layout=danhsachtaikhoan">Tài Khoản</a></li>
                 </ul>
             </div>
 

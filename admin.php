@@ -40,6 +40,22 @@ if (mysqli_connect_errno()) {
                     require_once 'sanpham/xoadanhmuc.php';
                     break;
 
+                case 'danhsachtaikhoan':
+                    require_once 'sanpham/danhsachtaikhoan.php';
+                    break;
+
+                case 'themtaikhoan':
+                    require_once 'sanpham/themtaikhoan.php';
+                    break;
+    
+                case 'suataikhoan':
+                    require_once 'sanpham/suataikhoan.php';
+                    break;
+                        
+                case 'xoataikhoan':
+                    require_once 'sanpham/xoataikhoan.php';
+                    break;
+
                 case 'them':
                     require_once 'sanpham/them.php';
                     break;
