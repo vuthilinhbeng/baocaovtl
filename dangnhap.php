@@ -1,28 +1,3 @@
-
-<?php
-$con = mysqli_connect("localhost","root","","blackrouge",3308);
-
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit();
-}
-?>
-<?php
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      $myusername = $_POST['username'];
-      $mypassword = $_POST['password']; 
-      $sql = "SELECT * FROM loginlogin WHERE TaiKhoan = '$myusername' and MatKhau = '$mypassword'";
-      $result = mysqli_query($con,$sql);
-      $count = mysqli_num_rows($result);
-        if($count==1){
-            header("location:trangchu.php");
-            // header("location:luachon.php");
-        }
-        else{
-            // header("location:thatbai.php");
-        }
-   }
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,21 +145,21 @@ if (mysqli_connect_errno()) {
                 <img src="./imge/logo.webp" alt="">
                 <h4>đăng nhập</h4>
             </div>
-            <form action="">
+            <form action="" method="POST">
                 <div class="form_group">
                     <label for="login-email">Email*</label>
-                    <input type="email" id="login-email" class="form-control" name="username" required>
+                    <input type="email" id="login-email" name="email" class="form-control" value = "" required>
                 </div>
                 <div class="form_group">
                     <label for="login-password">Mật khẩu*</label>
-                    <input type="password" id="login-password" class="form-control" name="password"  required>
+                    <input type="password" id="login-password" name="password" class="form-control" value = "" required>
 
                 </div>
                 <div class="forget">
                     <a href="#">Quên mật khẩu?</a>
                 </div>
                 <div class="form_group">
-                    <button type="submit" class="btn_dangnhap">Đăng Nhập</button>
+                    <button type="submit" name="submit" class="btn_dangnhap">Đăng Nhập</button>
                 </div>
                 <div class="form_ngoai">
                     <div class="btn_gg">
@@ -318,3 +293,46 @@ if (mysqli_connect_errno()) {
 </body>
 
 </html>
+<?php
+//Khai báo sử dụng session
+session_start();
+//Khai báo utf-8 để hiển thị được tiếng việt
+header('Content-Type: text/html; charset=UTF-8');
+//Xử lý đăng nhập
+if (isset($_POST['submit']))
+{
+        //Kết nối tới database
+        $connect = mysqli_connect("localhost","root","","blackrouge",3308) or die ('Không thể kết nối tới database');
+
+        if($connect === false){ 
+        die("ERROR: Could not connect. " . mysqli_connect_error()); 
+        }
+        else {
+        // echo 'Kết nối DB thành công!';
+        }
+        
+        //Lấy dữ liệu nhập vào
+        $email = ($_POST['email']);
+        $password = ($_POST['password']);
+     
+    //Kiểm tra tên đăng nhập có tồn tại không
+    $query = mysqli_query($connect, "SELECT * FROM dangky WHERE EMAIL='$email'");
+    $row = mysqli_fetch_array($query);
+    if (mysqli_num_rows($query) == 0) {
+        echo '<script>alert("Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại.")</script>';
+    } else if ($password != $row["PASSWORD"]) {
+        echo '<script>alert("Mật khẩu không đúng. Vui lòng nhập lại.")</script>';
+    } else {
+        $_SESSION['EMAIL'] = $email;
+        echo '<script>alert("Bạn đã đăng nhập thành công.")</script>'; ;
+    ?>
+        <script> location.href = 'trangchu.php'; </script>
+    <?php
+    }
+    die();
+     
+    //Lưu tên đăng nhập
+    
+    
+}
+?>
