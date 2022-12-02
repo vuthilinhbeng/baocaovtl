@@ -1721,3 +1721,9 @@ a:hover{
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
 }
+.primary{
+    color: #fff;
+    background-color: #ffe600;
+    border-color: #007bff;
+    display: inline-block;
+}

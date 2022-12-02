@@ -9,7 +9,9 @@ if (mysqli_connect_errno()) {
     $query_sp = mysqli_query($con, $sql);
   
     $row_sp = mysqli_fetch_assoc($query_sp);
-
+    // echo( $row_sp['image']);
+    $imgsp = $row_sp['image'];
+    
      $sql_brand = "SELECT * FROM danhmuc";
      $query_brand = mysqli_query($con, $sql_brand);
 
@@ -19,15 +21,21 @@ if (mysqli_connect_errno()) {
         $code = $_POST['code'];
 
         $image = $_FILES['image']['name'];
+        echo($image);
+        echo("hihihihi");
         $image_tmp = $_FILES['image']['tmp_name'];
-
+        echo($image_tmp);
+      
+        echo("hoho");
         $price = $_POST['price'];
         $ngaycapnhat = $_POST['ngaycapnhat'];
         $ngaytao= $_POST['ngaytao'];
         $SoLuong = $_POST['SoLuong'];
         $id_brand= $_POST['id_brand'];
 
-        $sql = "UPDATE  `sanpham` SET `name`='$name',`code`='$code',`image`='imge/$image',`price`=$price,`ngaycapnhat`='$ngaycapnhat',`ngaytao`='$ngaytao',`id_brand`=$id_brand,`SoLuong`=$SoLuong
+        if($image_tmp == '')
+        {
+        $sql = "UPDATE  `sanpham` SET `name`='$name',`code`='$code',`image`='$imgsp',`price`=$price,`ngaycapnhat`='$ngaycapnhat',`ngaytao`='$ngaytao',`id_brand`=$id_brand,`SoLuong`=$SoLuong
         WHERE `id`=$id";
         if($con->query($sql)===TRUE){
             
@@ -35,6 +43,18 @@ if (mysqli_connect_errno()) {
         }
         $query = mysqli_query($con, $sql);
         move_uploaded_file($image_tmp, 'imge/'.$image);
+        }
+        else{
+            $sql = "UPDATE  `sanpham` SET `name`='$name',`code`='$code',`image`='imge/$image',`price`=$price,`ngaycapnhat`='$ngaycapnhat',`ngaytao`='$ngaytao',`id_brand`=$id_brand,`SoLuong`=$SoLuong
+            WHERE `id`=$id";
+            if($con->query($sql)===TRUE){
+                
+                header('location: admin.php?page_layout=danhsach');
+            }
+            $query = mysqli_query($con, $sql);
+            move_uploaded_file($image_tmp, 'imge/'.$image);
+        }
+       
      }
       
      
@@ -66,7 +86,7 @@ if (mysqli_connect_errno()) {
 
             <div class = "form-group">
                 <label for="">Ảnh sản phẩm</label>
-                <input type="file" name="image" > <br>
+                <input type="file" name="image" value="<?php echo($row_sp['image']);?>" > <br>
                 <img src="<?php echo($row_sp['image']);?>" alt="" style="width:100px">
             </div>
 
@@ -100,7 +120,7 @@ if (mysqli_connect_errno()) {
               </select>
             </div>
 
-            <button name = "sbm" type ="submit" class = "btn btn-success">Thêm</button>
+            <button name = "sbm" type ="submit" class = "btn btn-success">Sửa</button>
            </form>
         </div>
 

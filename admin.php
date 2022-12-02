@@ -23,7 +23,23 @@ if (mysqli_connect_errno()) {
                 case 'danhsach':
                     require_once 'sanpham/danhsach.php';
                     break;
-    
+
+                case 'danhmuc':
+                    require_once 'sanpham/danhmuc.php';
+                    break;
+
+                case 'themdanhmuc':
+                    require_once 'sanpham/themdanhmuc.php';
+                    break;
+
+                case 'suadanhmuc':
+                    require_once 'sanpham/suadanhmuc.php';
+                    break;
+                    
+                case 'xoadanhmuc':
+                    require_once 'sanpham/xoadanhmuc.php';
+                    break;
+
                 case 'them':
                     require_once 'sanpham/them.php';
                     break;
