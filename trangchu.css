@@ -12,7 +12,9 @@
     --font-size2: 20px;
     --font-weight1: bold;
 }
-
+a{
+    text-decoration: none
+}
 body {
     margin: 0;
     padding: 0;
@@ -688,7 +690,7 @@ body {
 
 .body_middle_seven {
     width: 1265px;
-    height: 280px;
+    min-height: 400px;
     margin: auto;
     margin-top: 30px;
 }
@@ -1548,10 +1550,13 @@ input[type='radio']:checked:after {
     font-size: var(--font-size1);
     line-height: 50px;
     text-align: center;
+    text-decoration: none;
+
 }
 
 .one a:hover {
     color: var(--color1);
+    text-decoration: none;
 }
 
 .one span {
@@ -1720,10 +1725,4 @@ a:hover{
     padding: 0 0px 15px 0px;
     border: 1px solid #ccc;
     border-radius: 0 0 10px 10px;
-}
-.primary{
-    color: #fff;
-    background-color: #ffe600;
-    border-color: #007bff;
-    display: inline-block;
 }

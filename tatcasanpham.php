@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="trangchu.css">
     <link rel="stylesheet" href="tatcasanpham.css">
     <link rel="stylesheet" href="giohang.css">
+    <link rel="stylesheet" href="timkiemsanpham.css">
     <title>Tất cả sản phẩm</title>
 </head>
 

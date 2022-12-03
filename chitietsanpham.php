@@ -140,28 +140,49 @@
         <hr>
         <div class="body_content">
             <div class="body_content_head">
-                <h1><a href="#">Trang chủ </a>/ <a href="#">06.2022 - Son môi chính hãng giảm 10%</a>/ Black Rouge Leez
-                    Velvet Tint</h1>
+                <h1><a href="#">Trang chủ / </a>
+                    <a><?php
+                        $conn = mysqli_connect("localhost", "root", "", "blackrouge",3308);
+                        if (mysqli_connect_errno()) {
+                            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                            exit();
+                        }
+                        if (isset($_REQUEST['id']) and $_REQUEST['id'] != "") {
+                            $id = $_GET['id'];
+                            $sql = "select * from sanpham where id  = $id";
+                            $query = mysqli_query($conn, $sql);
+                            $name = "";
+                            $gia = "";
+                            $linkImg = "";
+                            while ($row = mysqli_fetch_array($query)) {
+                                $name = $row["name"];
+                                $gia = $row["price"];
+                                $linkImg = $row["image"];
+                            }
+                            echo $name;
+                        }
+                        ?></a>
             </div>
             <div class="body_content_body1">
                 <div class="body_content_left">
                     <div class="body_content_left1">
                         <div class="body_content_left1_left">
                             <div>
-                                <img id="imgMain" src="imge/mara1.webp" alt="">
+                                <!-- <img id="imgMain" src="imge/mara1.webp" alt=""> -->
+                                <img id="imgMain" src="<?php echo $linkImg; ?>" />
                             </div>
-                            <div id="imgThumbs">
+                            <!-- <div id="imgThumbs">
                                 <img class="active" src="imge/mara1.webp" onclick="doi_anh(0)" alt="">
                                 <img src="imge/mara2.webp" onclick="doi_anh(1)" alt="">
                                 <img src="imge/mara3.webp" onclick="doi_anh(2)" alt="">
                                 <img src="imge/mara4.webp" onclick="doi_anh(3)" alt="">
                                 <img src="imge/mara5.webp" onclick="doi_anh(4)" alt="">
                                 <img src="imge/mara6.webp" onclick="doi_anh(5)" alt="">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="body_content_left1_right">
                             <div class="sp_top">
-                                <h1>Black Rouge Mara Hot Water Tint</h1>
+                                <h1><?php echo $name; ?></h1>
                                 <div class="star">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -170,7 +191,7 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                             </div>
-                            <div class="color">
+                            <!-- <div class="color">
                                 <h2>Màu sắc:</h2>
                                 <div class="imgThumbs">
                                     <input id="LV00" name="color" type="radio" value="LV00" onclick="doi_anh(0)">
@@ -181,19 +202,19 @@
                                     <input id="LV05" name="color" type="radio" value="LV05" onclick="doi_anh(5)">
                                 </div>
 
-                            </div>
+                            </div> -->
                             <div class="price">
                                 <h2>Giá:</h2>
-                                <p style="font-size: 20px; margin-top: 12px;" class="gia_2">268,200đ</p>
-                                <p class="gia_1">298,000đ</p>
-                                <p class="gia_2">(-10%)</p>
+                                <p style="font-size: 20px; margin-top: 12px;" class="gia_2"><?php echo $gia; ?></p>
+                                <!-- <p class="gia_1">298,000đ</p>
+                                <p class="gia_2">(-10%)</p> -->
                             </div>
                             <div class="count">
                                 <h2>Số lượng:</h2>
                                 <span id="increase" class="increase">-</span>
                                 <span class="value">1</span>
                                 <span id="reduction" class="reduction">+</span>
-                                    <button type="button" id="addtocart" onclick="location.href='giohang.php';">Thêm vào giỏ hàng</button>
+                                <button type="button" id="addtocart" onclick="location.href='giohang.php';">Thêm vào giỏ hàng</button>
                             </div>
                         </div>
                     </div>
@@ -436,8 +457,7 @@
                 <p>Địa chỉ: Tầng 10, 194 Golden Building, 473 Điện Biên Phủ, Phường 25, Bình Thạnh, Hồ Chí Minh</p>
                 <p>Thông tin hỗ trợ: <a href="#">0909 312 350</a></p>
                 <p>Email support: cskh@dmnc.vn Or blackrougevn@gmail.com</p>
-                <a href="http://online.gov.vn/(X(1)S(c4r0ihn4yy1gwxol5piuiyug))/Home/WebDetails/62960?AspxAutoDetectCookieSupport=1"
-                    target="_blank"><img src="imge/fFooter_bct_image.webp" alt=""></a>
+                <a href="http://online.gov.vn/(X(1)S(c4r0ihn4yy1gwxol5piuiyug))/Home/WebDetails/62960?AspxAutoDetectCookieSupport=1" target="_blank"><img src="imge/fFooter_bct_image.webp" alt=""></a>
             </div>
             <div class="footer2">
                 <div class="footer2_top">
@@ -477,16 +497,11 @@
             <div class="footer4">
                 <div class="footer4_top">
                     <p>KẾT NỐI VỚI CHÚNG TÔI</p>
-                    <a href="https://www.facebook.com/BlackRougeVietnam/" target="_blank"><img
-                            src="imge/fFooter_top_social_image_1.webp" alt=""></a>
-                    <a href="https://www.tiktok.com/@blackrougevietnam" target="_blank"><img
-                            src="imge/fFooter_top_social_image_2.webp" alt=""></a>
-                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img
-                            src="imge/fFooter_top_social_image_3.webp" alt=""></a>
-                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img
-                            src="imge/fFooter_top_social_image_4.webp" alt=""></a>
-                    <a href="https://www.instagram.com/blackrouge_vn/" target="_blank"><img
-                            src="imge/fFooter_top_social_image_5.webp" alt=""></a>
+                    <a href="https://www.facebook.com/BlackRougeVietnam/" target="_blank"><img src="imge/fFooter_top_social_image_1.webp" alt=""></a>
+                    <a href="https://www.tiktok.com/@blackrougevietnam" target="_blank"><img src="imge/fFooter_top_social_image_2.webp" alt=""></a>
+                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img src="imge/fFooter_top_social_image_3.webp" alt=""></a>
+                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img src="imge/fFooter_top_social_image_4.webp" alt=""></a>
+                    <a href="https://www.instagram.com/blackrouge_vn/" target="_blank"><img src="imge/fFooter_top_social_image_5.webp" alt=""></a>
                 </div>
                 <div class="footer4_bottom">
                     <p>ĐĂNG KÍ NHẬN BẢN TIN</p>
@@ -525,24 +540,23 @@
     <script src="chitietsanpham.js"></script>
     <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    $(function () {
-        let $elm_value = $(".value");
-        $('.increase').click(function (){
-            let $value_increase = parseInt($elm_value.text());
-            if ($value_increase <= 1) {
-                return false;
-        }
-        $elm_value.text($value_increase - 1);
+        $(function() {
+            let $elm_value = $(".value");
+            $('.increase').click(function() {
+                let $value_increase = parseInt($elm_value.text());
+                if ($value_increase <= 1) {
+                    return false;
+                }
+                $elm_value.text($value_increase - 1);
+            })
+            $('.reduction').click(function() {
+                let $value_increase = parseInt($elm_value.text());
+                $elm_value.text($value_increase + 1);
+            })
         })
-        $('.reduction').click(function (){
-            let $value_increase = parseInt($elm_value.text());
-            $elm_value.text($value_increase + 1);
-        })
-    })
-        
     </script>
 
-    
+
 </body>
 
 </html>

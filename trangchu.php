@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="trangchu.css">
     <title>Blackrouge</title>
+
 </head>
 
 <body>
     <!-- Header -->
-<!-- ewqew -->
+    <!-- ewqew -->
     <div class="header" id="lendau">
         <div class="header_top">
             <ul class="header_top_left_left">
@@ -173,52 +173,52 @@
         </div>
         <!-- End Body_middle_2 -->
 
-        <!-- Body_middle_3 -->        
+        <!-- Body_middle_3 -->
         <div class="body_middle_three" id="like">
-            <div  class="body_middle_three_top">
+            <div class="body_middle_three_top">
                 <div class="body_middle_three_top_left">
-                <span>Sản phẩm được nhiều KOL & Celeb yêu thích</span>
+                    <span>Sản phẩm được nhiều KOL & Celeb yêu thích</span>
                 </div>
-                <div  class="more">
+                <div class="more">
                     <a href="">Xem Thêm</a>
                 </div>
             </div>
-            <div id="product-grid" >
-            <?php
-                	require_once("dbcontroller.php");
-                    $db_handle = new DBController();
-	                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE SanYeuThich = 1 ");
-	                if (!empty($product_array)) { 
-                        foreach($product_array as $key=>$value){
-                            ?>
-                            <div class="one" >
-                                <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-                                <div class="product-image" ><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-			                    <div class="product-tile-footer">
-                                    <div class="product-title"><a href="chitietsanpham.php"><?php echo $product_array[$key]["name"]; ?> </a></div>
-                                    <div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
-                                    <div class="report"> 
-                                         <div class="star">
-                                         <?php
-                                         for($u=0;$u<5;$u++){
-                                            ?>
-                                            <i class="fa fa-star"></i>
+            <div id="product-grid">
+                <?php
+                require_once("dbcontroller.php");
+                $db_handle = new DBController();
+                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE SanYeuThich = 1 ");
+                if (!empty($product_array)) {
+                    foreach ($product_array as $key => $value) {
+                ?>
+                        <div class="one">
+                            <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                                <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+                                <div class="product-tile-footer">
+                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none" ><?php echo $product_array[$key]["name"]; ?> </a></div>
+                                    <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
+                                    <div class="report">
+                                        <div class="star">
                                             <?php
-                                             }
-                                              ?>
-                                         </div>
-                                    <div class="heart">
-                                        <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
+                                            for ($u = 0; $u < 5; $u++) {
+                                            ?>
+                                                <i class="fa fa-star" ></i>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="heart">
+                                            <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
+                                        </div>
                                     </div>
-                                    </div>
-                                     <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="THÊM" class="btnAddAction" /></div>
-			                    </div>
-			                    </form>
-		                    </div>
-	                    <?php
-	                    	}
-                        }
-	                    ?>
+                                    <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="THÊM" class="btnAddAction" /></div>
+                                </div>
+                            </form>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
             </div>
         </div>
         <!-- End body_middle_3 -->
@@ -240,44 +240,44 @@
                     <a href="">Xem Thêm</a>
                 </div>
             </div>
-            <div id="product-grid" >
-            <?php
-                	require_once("dbcontroller.php");
-                    $db_handle = new DBController();
-	                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham  ORDER BY id DESC LIMIT 4");
-	                if (!empty($product_array)) { 
-                        foreach($product_array as $key=>$value){
-                            ?>
-                            <div class="one" >
-                                <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-                                <div class="product-image" ><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
-			                    <div class="product-tile-footer">
-                                    <div class="product-title"><a href="chitietsanpham.php"><?php echo $product_array[$key]["name"]; ?> </a></div>
-                                    <div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
+            <div id="product-grid">
+                <?php
+                require_once("dbcontroller.php");
+                $db_handle = new DBController();
+                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham  ORDER BY id DESC LIMIT 4");
+                if (!empty($product_array)) {
+                    foreach ($product_array as $key => $value) {
+                ?>
+                        <div class="one">
+                            <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                                <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+                                <div class="product-tile-footer">
+                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none"><?php echo $product_array[$key]["name"]; ?> </a></div>
+                                    <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
                                     <div class="report">
-                                         <div class="star">
-                                         <?php
-                                         for($u=0;$u<5;$u++){
-                                            ?>
-                                            <i class="fa fa-star"></i>
+                                        <div class="star">
                                             <?php
-                                             }
-                                              ?>
-                                         </div>
-                                    <div class="heart">
-                                        <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
+                                            for ($u = 0; $u < 5; $u++) {
+                                            ?>
+                                                <i class="fa fa-star"></i>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class="heart">
+                                            <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
+                                        </div>
                                     </div>
+                                    <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+                                        <input type="submit" value="THÊM" class="btnAddAction" />
                                     </div>
-                                     <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" />
-                                     <input type="submit" value="THÊM" class="btnAddAction" />
-                                    </div>
-			                    </div>
-			                    </form>
-		                    </div>
-	                    <?php
-	                    	}
-                        }
-	                    ?>
+                                </div>
+                            </form>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
             </div>
         </div>
         <!-- ENd body_middle_5 -->
@@ -291,7 +291,7 @@
         <div class="body_middle_seven" id="sanphambanchay">
             <div class="body_middle_seven_top">
                 <div class="body_middle_seven_top_left">
-                    <a href="">Sản phẩm bán chạy</a>
+                    <a href="" style="text-decoration: none">Sản phẩm bán chạy</a>
                 </div>
                 <div class="test"></div>
                 <div class="body_middle_seven_top_right">
@@ -299,48 +299,91 @@
                 </div>
             </div>
             <div class="body_middle_seven_bottom">
-            <?php
-            $mylist_seven = ['./imge/anh_body_7_1.webp','./imge/anh_body_7_2.webp','./imge/anh_body_7_3.webp','./imge/anh_body_7_4.webp','./imge/anh_body_7_5.webp','./imge/anh_body_7_6.webp','./imge/anh_body_7_7.webp','./imge/anh_body_7_8.webp'];
-            // $mylist_hover_two = ['./imge/1.PNG','./imge/4.webp','./imge/7.webp','./imge/9.webp','./imge/son_3_1_main.webp'];
-            $len = count($mylist_seven);
-            ?>   
-            <div class = "to">
-            <?php
-            for($i=0;$i<$len;$i++){
-            ?>
-                <div class="body_miidle_seven_bottom_in yi">
-                    <div>
-                        <a href="chitietsanpham.php" target="_blank"> <img src="<?php echo $mylist_seven[$i] ?>" alt=""></a>
-                    </div>
-                    <div>
-                        <a href="chitietsanpham.php" target="_blank"><span>Black Rouge Airfit Velvet Tint Ver 1 THE
-                                RED</span></a>
-                        <div class="gia">
-                            <p class="gia_1">318,000đ</p>
-                            <p class="gia_2">268,200đ</p>
+                <!-- <?php
+                $mylist_seven = ['./imge/anh_body_7_1.webp', './imge/anh_body_7_2.webp', './imge/anh_body_7_3.webp', './imge/anh_body_7_4.webp', './imge/anh_body_7_5.webp', './imge/anh_body_7_6.webp', './imge/anh_body_7_7.webp', './imge/anh_body_7_8.webp'];
+                // $mylist_hover_two = ['./imge/1.PNG','./imge/4.webp','./imge/7.webp','./imge/9.webp','./imge/son_3_1_main.webp'];
+                $len = count($mylist_seven);
+                ?>
+                <div class="to">
+                    <?php
+                    for ($i = 0; $i < $len; $i++) {
+                    ?>
+                        <div class="body_miidle_seven_bottom_in yi">
+                            <div>
+                                <a href="chitietsanpham.php" target="_blank"> <img src="<?php echo $mylist_seven[$i] ?>" alt="" style="text-decoration: none"></a>
+                            </div>
+                            <div>
+                                <a href="chitietsanpham.php" target="_blank" style="text-decoration: none"><span>Black Rouge Airfit Velvet Tint Ver 1 THE
+                                        RED</span></a>
+                                <div class="gia">
+                                    <p class="gia_1">318,000đ</p>
+                                    <p class="gia_2">268,200đ</p>
+                                </div>
+
+                            </div>
                         </div>
 
-                    </div>
-                </div>
 
-            
-            <?php
-            }
-            ?>
+                    <?php
+                    }
+                    ?> -->
+
+
+
+<div id="product-grid" >
+    <?php
+    require_once("dbcontroller.php");
+    $db_handle = new DBController();
+    $product_array = $db_handle->runQuery("SELECT * FROM  sanpham  WHERE SanYeuThich = 2");
+    if (!empty($product_array)) {
+        foreach ($product_array as $key => $value) {
+    ?>
+            <div class="one">
+                <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                    <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+                    <div class="product-tile-footer">
+                        <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none"><?php echo $product_array[$key]["name"]; ?> </a></div>
+                        <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
+                        <div class="report">
+                            <div class="star">
+                                <?php
+                                for ($u = 0; $u < 5; $u++) {
+                                ?>
+                                    <i class="fa fa-star"></i>
+                                <?php
+                                }
+                                ?>
+                            </div>
+                            <div class="heart">
+                                <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
+                            </div>
+                        </div>
+                        <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+                            <input type="submit" value="THÊM" class="btnAddAction" />
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
+    <?php
+        }
+    }
+    ?>
+
+
+                </div>
+            </div>
         </div>
         <!-- End_body_middle_7 -->
         <!-- body_middle_eight -->
         <div class="body_middle_eight">
             <?php
-            $myimg = ['./imge/anh_body_8_1.webp','./imge/anh_body_8_2.webp','./imge/anh_body_8_3.webp','./imge/anh_body_8_4.webp'];
+            $myimg = ['./imge/anh_body_8_1.webp', './imge/anh_body_8_2.webp', './imge/anh_body_8_3.webp', './imge/anh_body_8_4.webp'];
             $lenm = count($myimg);
             ?>
-             <?php
-            for($i=0;$i<$lenm;$i++){
+            <?php
+            for ($i = 0; $i < $lenm; $i++) {
             ?>
-            <img src="<?php echo $myimg[$i] ?>" alt="">
+                <img src="<?php echo $myimg[$i] ?>" alt="">
             <?php
             }
             ?>
@@ -426,8 +469,7 @@
                                     </div>
                                 </div>
 
-                                <input type="radio" class="slide_btn_left_nine" onclick="B_ack()" name="rdo"
-                                    checked="true">
+                                <input type="radio" class="slide_btn_left_nine" onclick="B_ack()" name="rdo" checked="true">
                                 <input type="radio" class="slide_btn_right_nine" onclick="N_ext()" name="rdo">
                             </div>
                         </div>
@@ -509,8 +551,7 @@
                                 </div>
                             </div>
                             <input type="radio" class="slide_btn_left_nine_right" onclick="B_ac_k()" name="rdon">
-                            <input type="radio" class="slide_btn_right_nine_right" onclick="N_ex_t()" name="rdon"
-                                checked="true">
+                            <input type="radio" class="slide_btn_right_nine_right" onclick="N_ex_t()" name="rdon" checked="true">
                         </div>
                     </div>
                 </div>
@@ -542,8 +583,7 @@
                 <p>Địa chỉ: Tầng 10, 194 Golden Building, 473 Điện Biên Phủ, Phường 25, Bình Thạnh, Hồ Chí Minh</p>
                 <p>Thông tin hỗ trợ: <a href="#">0909 312 350</a></p>
                 <p>Email support: cskh@dmnc.vn Or blackrougevn@gmail.com</p>
-                <a href="http://online.gov.vn/(X(1)S(c4r0ihn4yy1gwxol5piuiyug))/Home/WebDetails/62960?AspxAutoDetectCookieSupport=1"
-                    target="_blank"><img src="imge/fFooter_bct_image.webp" alt=""></a>
+                <a href="http://online.gov.vn/(X(1)S(c4r0ihn4yy1gwxol5piuiyug))/Home/WebDetails/62960?AspxAutoDetectCookieSupport=1" target="_blank"><img src="imge/fFooter_bct_image.webp" alt=""></a>
             </div>
             <div class="footer2">
                 <div class="footer2_top">
@@ -583,16 +623,11 @@
             <div class="footer4">
                 <div class="footer4_top">
                     <p>KẾT NỐI VỚI CHÚNG TÔI</p>
-                    <a href="https://www.facebook.com/BlackRougeVietnam/" target="_blank"><img
-                            src="imge/fFooter_top_social_image_1.webp" alt=""></a>
-                    <a href="https://www.tiktok.com/@blackrougevietnam" target="_blank"><img
-                            src="imge/fFooter_top_social_image_2.webp" alt=""></a>
-                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img
-                            src="imge/fFooter_top_social_image_3.webp" alt=""></a>
-                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img
-                            src="imge/fFooter_top_social_image_4.webp" alt=""></a>
-                    <a href="https://www.instagram.com/blackrouge_vn/" target="_blank"><img
-                            src="imge/fFooter_top_social_image_5.webp" alt=""></a>
+                    <a href="https://www.facebook.com/BlackRougeVietnam/" target="_blank"><img src="imge/fFooter_top_social_image_1.webp" alt=""></a>
+                    <a href="https://www.tiktok.com/@blackrougevietnam" target="_blank"><img src="imge/fFooter_top_social_image_2.webp" alt=""></a>
+                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img src="imge/fFooter_top_social_image_3.webp" alt=""></a>
+                    <a href="https://zalo.me/4083379486007296299" target="_blank"><img src="imge/fFooter_top_social_image_4.webp" alt=""></a>
+                    <a href="https://www.instagram.com/blackrouge_vn/" target="_blank"><img src="imge/fFooter_top_social_image_5.webp" alt=""></a>
                 </div>
                 <div class="footer4_bottom">
                     <p>ĐĂNG KÍ NHẬN BẢN TIN</p>
@@ -628,7 +663,18 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="trangchu.js"></script>
-
+    <script>
+        const handleSearch = () => {
+            const searchBar = document.querySelector("#search_btn");
+            const searchResult = document.querySelector("#search_text");
+            searchBar.onclick = (e)=>{
+                e.preventDefault();
+                // console.log(searchResult.value.trim());
+                window.location.href ="timkiemsanpham.php?name=" + searchResult.value;
+            }
+        }
+        handleSearch();
+    </script>
 </body>
 
 </html>
