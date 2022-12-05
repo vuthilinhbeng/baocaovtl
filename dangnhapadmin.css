@@ -1,0 +1,79 @@
+:root {
+    --color1: #f5498b;
+    --color2: rgb(70, 68, 68);
+    --color3: #fcedf2;
+    --color4: white;
+    --color5: yellow;
+    --color6: #e41313;
+    --color7: rgb(241, 236, 236);
+    --font-family1: segoe ui;
+    --font-size1: 13px;
+    --font-size2: 20px;
+    --font-size3: 18px;
+    --font-weight1: bold;
+    --background-color1: #4064ac;
+    --background-color2: #CF4332;
+    --background-image1: url(imge/anh_dn_fb.webp);
+    --background-image2: url(./imge/anh_dn_gg.webp);
+}
+
+.card{
+    width: 600px;
+    height: 480px; 
+    margin: auto;  
+    margin-top: 100px;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.form-group{
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-top: 40px;
+    
+}
+.form-control{
+    border-radius: 3px;
+    height: 40px;
+    width: 400px;
+    line-height: 40px;
+    border: 1px solid var(--color7);
+    outline: none;
+    padding-left: 20px;
+    transition: all 0.4s;
+}
+
+input[type='text']:focus {
+    border: 1px solid var(--color1);
+}
+
+input[type='password']:focus {
+    border: 1px solid var(--color1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 90px;
+    font-family: var(--font-family1);
+    font-size: var(--font-size1);
+
+}
+.btn{
+    display: block;
+    height: 42px;
+    width: 420px;
+    margin: auto;
+    border-radius: 3px;
+    line-height: 42px;
+    border: 1px solid var(--color1);
+    outline: none;
+    padding-left: 0px;
+    transform: 0.4s;
+    background-color: var(--color4);
+    cursor: pointer;
+    margin-top: 50px;
+}
+.btn:hover  {
+    color: var(--color4);
+    background-color: var(--color1);
+}

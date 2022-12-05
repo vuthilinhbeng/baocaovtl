@@ -345,7 +345,6 @@ if (mysqli_connect_errno()) {
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="trangchu.js"></script>
-
 </body>
 
 </html>
