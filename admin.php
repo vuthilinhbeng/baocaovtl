@@ -28,9 +28,7 @@ if (mysqli_connect_errno()) {
     <title>ADMIN</title>
 </head>
 <body>
-    <a href="logout.php">
-        <button type="submit" style= "border: 2px solid #e7a5be;  border-radius: 5px;height: 30px;  margin:20px 0 0 60px;">Đăng Xuất</button>
-    </a>
+
     <?php
         if(isset($_GET['page_layout'])){
             switch($_GET['page_layout']){
@@ -92,6 +90,8 @@ if (mysqli_connect_errno()) {
             require_once 'sanpham/danhsach.php';
         }
     ?>
-
+    <a href="logout.php">
+        <button type="submit" style= "border: 2px solid #e7a5be;  border-radius: 5px;height: 30px;  margin:20px 10px 30px 0px; float: right; ">Đăng Xuất</button>
+    </a>
 </body>
 </html>
