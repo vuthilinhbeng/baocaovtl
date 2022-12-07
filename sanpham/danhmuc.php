@@ -21,7 +21,7 @@ if (mysqli_connect_errno()) {
     $sql = "SELECT * FROM danhmuc";
     $query = mysqli_query($con, $sql);
 ?>
-<div style = "display: flex; margin-top:50px;">
+<div style = "display: flex; margin-top:20px;">
 
 <div class="content-wrapper">
     <div class="container">

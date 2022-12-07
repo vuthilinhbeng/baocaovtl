@@ -7,9 +7,11 @@
     --color6: #e41313;
     --color7: rgb(241, 236, 236);
     --font-family1: segoe ui;
+    --font-family2:'Courier New', Courier, monospace;
     --font-size1: 13px;
     --font-size2: 20px;
     --font-size3: 18px;
+    --font-size3: 16px;
     --font-weight1: bold;
     --background-color1: #4064ac;
     --background-color2: #CF4332;
@@ -23,7 +25,7 @@
     margin: auto;  
     margin-top: 100px;
     text-align: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: var(--color1) 0px 2px 8px 0px;
 }
 .form-group{
     margin-bottom: 20px;
@@ -54,9 +56,12 @@ label {
     margin-bottom: 5px;
     text-align: left;
     margin-left: 90px;
-    font-family: var(--font-family1);
-    font-size: var(--font-size1);
+    font-family: var(--font-family2);
+    font-size: var(--font-size4);
 
+}
+h2{
+    font-family: var(--font-family2);
 }
 .btn{
     display: block;
@@ -72,6 +77,8 @@ label {
     background-color: var(--color4);
     cursor: pointer;
     margin-top: 50px;
+    font-family: var(--font-family2);
+    font-size: var(--font-size4);
 }
 .btn:hover  {
     color: var(--color4);

@@ -3,6 +3,11 @@ $con = mysqli_connect("localhost","root","","blackrouge",3308);
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
+     session_start();
+     if(isset($_SESSION['TEN'])){
+        header('location:admin.php');
+     }
+    
      if(isset($_POST['sbm'])){
         $TEN= $_POST['TEN'];
         $PASSWORD= $_POST['PASSWORD'];
@@ -16,12 +21,8 @@ if (mysqli_connect_errno()) {
             echo '<script>alert("Mật khẩu không đúng. Vui lòng nhập lại.")</script>';
         } else {
             $_SESSION['TEN'] = $TEN;
-            echo '<script>alert("Bạn đã đăng nhập thành công.")</script>'; ;
-        ?>
-            <script> location.href = 'admin.php'; </script>
-        <?php
+            header('location:admin.php');
         }
-        
      }
 
 ?>
@@ -45,7 +46,7 @@ if (mysqli_connect_errno()) {
             <h2>Chào Mừng ADMIN</h2>
         </div>
         <div class="card-body">
-           <form method="POST" enctype="multipart/form-data" >
+           <form method="POST" enctype="multipart/form-data" action="dangnhapadmin.php">
 
            <div class = "form-group">
                 <label for="">TÊN::</label>
@@ -57,7 +58,7 @@ if (mysqli_connect_errno()) {
                 <input type="password" name="PASSWORD" class = "form-control" required >
             </div>
 
-            <button name = "sbm" type ="submit" class = "btn btn-success">Thêm</button>
+            <button name = "sbm" type ="submit" class = "btn btn-success">ĐĂNG NHẬP ADMIN</button>
            </form>
         </div>
 

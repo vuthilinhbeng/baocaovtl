@@ -1,3 +1,5 @@
+
+
 <?php
 $con = mysqli_connect("localhost","root","","blackrouge",3308);
 if (mysqli_connect_errno()) {
@@ -5,6 +7,15 @@ if (mysqli_connect_errno()) {
   exit();
 }
 ?>
+
+<?php
+     session_start();
+     if( !isset($_SESSION['TEN']) ){
+        header('location:dangnhapadmin.php');
+     }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +28,9 @@ if (mysqli_connect_errno()) {
     <title>ADMIN</title>
 </head>
 <body>
+    <a href="logout.php">
+        <button type="submit" style= "border: 2px solid #e7a5be;  border-radius: 5px;height: 30px;  margin:20px 0 0 60px;">Đăng Xuất</button>
+    </a>
     <?php
         if(isset($_GET['page_layout'])){
             switch($_GET['page_layout']){
@@ -78,6 +92,6 @@ if (mysqli_connect_errno()) {
             require_once 'sanpham/danhsach.php';
         }
     ?>
-    
+
 </body>
 </html>

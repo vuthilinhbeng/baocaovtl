@@ -245,7 +245,7 @@ switch($_GET["action"]) {
                 <?php 
                 }
                 ?>
-                <a id="back" href="trangchu.php">Mua Sắm Tiếp</a>
+                <!-- <a id="back" href="trangchu.php">Mua Sắm Tiếp</a> -->
                 <a id="btnEmpty" href="giohang.php?action=empty">Empty Cart</a>
                 <a id="btntt" href="giohang.php">Thanh Toán</a>
              </div>
