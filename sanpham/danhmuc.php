@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   exit();
 }
-    $sql = "SELECT * FROM danhmuc";
+    $sql = "SELECT * FROM danhmuc ORDER BY id_brand ";
     $query = mysqli_query($con, $sql);
 ?>
 <div style = "display: flex; margin-top:20px;">

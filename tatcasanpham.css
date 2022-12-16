@@ -85,12 +85,12 @@
 
 #two {
     width: 1265px;
-    height: 400px;
+    min-height: 400px;
 }
 
 #four {
     width: 1265px;
-    height: 400px;
+    min-height: 400px;
 }
 
 .two {

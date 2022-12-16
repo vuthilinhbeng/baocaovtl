@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -187,7 +186,7 @@
                 <?php
                 require_once("dbcontroller.php");
                 $db_handle = new DBController();
-                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE SanYeuThich = 1 ");
+                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE SanYeuThich = 2 ");
                 if (!empty($product_array)) {
                     foreach ($product_array as $key => $value) {
                 ?>
@@ -195,7 +194,8 @@
                             <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
                                 <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
                                 <div class="product-tile-footer">
-                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none" ><?php echo $product_array[$key]["name"]; ?> </a></div>
+                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none;font-size: 14px;" ><?php echo $product_array[$key]["name"]; ?> </a></div>
+                                    <div>
                                     <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
                                     <div class="report">
                                         <div class="star">
@@ -210,6 +210,7 @@
                                         <div class="heart">
                                             <button id="heart_btn"> <i class="fa fa-heart"></i> </button>
                                         </div>
+                                    </div>
                                     </div>
                                     <div class="cart-action"><input type="text" class="product-quantity" name="quantity" value="1" size="2" /><input type="submit" value="THÊM" class="btnAddAction" /></div>
                                 </div>
@@ -252,7 +253,7 @@
                             <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
                                 <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
                                 <div class="product-tile-footer">
-                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none"><?php echo $product_array[$key]["name"]; ?> </a></div>
+                                    <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none; font-size: 14px;"><?php echo $product_array[$key]["name"]; ?> </a></div>
                                     <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
                                     <div class="report">
                                         <div class="star">
@@ -342,7 +343,7 @@
                 <form method="post" action="giohang.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
                     <div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
                     <div class="product-tile-footer">
-                        <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none"><?php echo $product_array[$key]["name"]; ?> </a></div>
+                        <div class="product-title"><a href="chitietsanpham.php?id=<?php echo $product_array[$key]["id"];?>" style="text-decoration: none; font-size: 14px;"><?php echo $product_array[$key]["name"]; ?> </a></div>
                         <div class="product-price"><?php echo "$" . $product_array[$key]["price"]; ?></div>
                         <div class="report">
                             <div class="star">

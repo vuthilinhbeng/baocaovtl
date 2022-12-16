@@ -163,7 +163,7 @@
             <?php
                 	require_once("dbcontroller.php");
                     $db_handle = new DBController();
-	                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE id_brand = 1 ");
+	                $product_array = $db_handle->runQuery("SELECT * FROM  sanpham WHERE id_brand = 3 ");
 	                if (!empty($product_array)) { 
                         foreach($product_array as $key=>$value){
                             ?>
@@ -199,7 +199,7 @@
 
                     </div>
 
-            <div class="sonmoi" id="two">
+            <div class="sonmoi" id="two" >
                 <!-- <div class="body_middle_five" id="sanphammoi"> -->
 
                 <div class="body_middle_five_top">
